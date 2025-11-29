@@ -14,7 +14,7 @@ out=$(seq 5 | ./average)
 
 out=$(echo あ| ./average)
 [ "$?" = 1 ]      || ng "$LINENO"
-[ "$(out)" = "" ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
 
 out=$(echo | ./average)
 [ "$?" = 1 ]      || ng "$LINENO"
